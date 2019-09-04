@@ -42,7 +42,7 @@ We assumed:
 We have two classes and we know the probability of each.
 A Bernoulli random variable has two possible outcomes: 0 or 1.
 (A binomial distribution is the sum of independent and identically distributed Bernoulli random variables.
-In general, if there are n Bernoulli trials, then the sum of those trials is binomially distributed with parameters n and p.) So each $y$ is a Bernoulli random variable, assuming that all $y$'s are independent we can write the likelyhood of data as: 
+In general, if there are n Bernoulli trials, then the sum of those trials is binomially distributed with parameters n and p.) So each <img src="https://render.githubusercontent.com/render/math?math=y"> is a Bernoulli random variable, assuming that all <img src="https://render.githubusercontent.com/render/math?math=y">'s are independent we can write the likelyhood of data as: 
 
 ### <img src="https://render.githubusercontent.com/render/math?math=L(w) = \prod_{i}^{n}P^{y_i}(1-P)^{1-y_i}">
 
