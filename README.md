@@ -11,7 +11,7 @@ We want to use linear model <img src="https://render.githubusercontent.com/rende
 
 In case of Linear Regression: <img src="https://render.githubusercontent.com/render/math?math=y = w^tx, -\infty \leq x \leq +\infty, -\infty \leq y \leq +\infty">
 
-Since the linear model is unbounded we cannot fit such model as <img src="https://render.githubusercontent.com/render/math?math=y = b_0 plus b_1x">, because it would give nonsenical results, when the output is binary.
+Since the linear model is unbounded we cannot fit such model as y=b_0 + b_1x, because it would give nonsenical results, when the output is binary.
 
 We need to tranform LHS (the dependent variable) to match the range of RHS (feature variables).
 
@@ -28,7 +28,7 @@ Now we have a model that makes sense:
 
 We can derive <img src="https://render.githubusercontent.com/render/math?math=P"> from this equation:
 
-<img src="https://render.githubusercontent.com/render/math?math=P=\frac{1}{1 plus e^{-(w^tx)}}">
+<img src="https://render.githubusercontent.com/render/math?math=P=\frac{1}{1 + e^{-(w^tx)}}">
 
 To sum up: we build a linear model that can predict the logarithm of odds <img src="https://render.githubusercontent.com/render/math?math=ln(O)">, and that can be transformed to probability. Thus our model predict the probability of <img src="https://render.githubusercontent.com/render/math?math=y"> belonging to class 1.
 
