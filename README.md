@@ -11,7 +11,7 @@ We want to use linear model <img src="https://render.githubusercontent.com/rende
 
 In case of Linear Regression: <img src="https://render.githubusercontent.com/render/math?math=y = w^tx, -\infty \leq x \leq +\infty, -\infty \leq y \leq +\infty">
 
-Since the linear model is unbounded we cannot fit such model as y=b_0 + b_1x, because it would give nonsenical results, when the output is binary.
+Since the linear model is unbounded we cannot fit such model as $y=b_0 + b_1x$, because it would give nonsenical results, when the output is binary.
 
 We need to tranform LHS (the dependent variable) to match the range of RHS (feature variables).
 
