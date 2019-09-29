@@ -38,9 +38,9 @@ First we need to establish by what hypothesis (distribuition) the data was gener
 
 We assumed:
 
-<img src="https://render.githubusercontent.com/render/math?math=P(y=1|x) = \frac{1}{1 plus e^{-(w^tx)}}">, thus:
+<img src="https://render.githubusercontent.com/render/math?math=P(y=1|x) = \frac{1}{1 + e^{-(w^tx)}}">, thus:
 
-<img src="https://render.githubusercontent.com/render/math?math=P(y=0|x) = 1 - \frac{1}{1 plus e^{-(w^tx)}}">, by law of total probability.
+<img src="https://render.githubusercontent.com/render/math?math=P(y=0|x) = 1 - \frac{1}{1 + e^{-(w^tx)}}">, by law of total probability.
 
 We have two classes and we know the probability of each.
 A Bernoulli random variable has two possible outcomes: 0 or 1.
@@ -53,9 +53,9 @@ For more convient further optimization let's take log of likelyhood function:
 
 ### <img src="https://render.githubusercontent.com/render/math?math=l(w) = ln(\prod_{i}^{n}P^{y_i}(1-P)^{1-y_i}) = \sum_i^n ln(P^{y_i}(1-P)^{1-y_i})"> 
 
-### <img src="https://render.githubusercontent.com/render/math?math== \sum_i^n y_i ln(P) plus (1-y_i)ln(1-P)">
+### <img src="https://render.githubusercontent.com/render/math?math== \sum_i^n y_i ln(P) + (1-y_i)ln(1-P)">
 
-### <img src="https://render.githubusercontent.com/render/math?math=\sum_i^n y_i ln\big(\frac{1}{1 plus e^{-w^tx}}\big)+(1-y_i)ln\big(\frac{1}{1+e^{w^tx}}\big)">
+### <img src="https://render.githubusercontent.com/render/math?math=\sum_i^n y_i ln\big(\frac{1}{1 + e^{-w^tx}}\big)+(1-y_i)ln\big(\frac{1}{1+e^{w^tx}}\big)">
 
 Log likelyhood derivative:
 
@@ -75,7 +75,7 @@ Update rule:
 
 plugging sigmoid function:
 
-### <img src="https://render.githubusercontent.com/render/math?math=w_{j+1} = w_j plus \alpha\big(y - \frac{1}{1 plus e^{-w^tx}}\big)x_j">
+### <img src="https://render.githubusercontent.com/render/math?math=w_{j+1} = w_j plus \alpha\big(y - \frac{1}{1 + e^{-w^tx}}\big)x_j">
 
 
 ```python
