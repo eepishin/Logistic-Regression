@@ -71,11 +71,11 @@ Log likelyhood derivative:
 
 Update rule:
 
-### <img src="https://render.githubusercontent.com/render/math?math=w_{j+1} = w_j plus \alpha\big(y - g(w^tx)\big)x_j">
+### <img src="https://render.githubusercontent.com/render/math?math=w_{j+1} = w_j%2B\alpha\big(y - g(w^tx)\big)x_j">
 
 plugging sigmoid function:
 
-### <img src="https://render.githubusercontent.com/render/math?math=w_{j+1} = w_j plus \alpha\big(y - \frac{1}{1 + e^{-w^tx}}\big)x_j">
+### <img src="https://render.githubusercontent.com/render/math?math=w_{j+1} = w_j%2B\alpha\big(y - \frac{1}{1%2Be^{-w^tx}}\big)x_j">
 
 
 ```python
