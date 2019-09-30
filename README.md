@@ -9,18 +9,18 @@ In this notebook I write a little tutorial on Logisitc Regression (LR). Firstly,
 
 We want to use linear model <img src="https://render.githubusercontent.com/render/math?math=w^tx"> to make predictions.
 
-In case of Linear Regression: <img src="https://render.githubusercontent.com/render/math?math=y = w^tx, -\infty \leq x \leq +\infty, -\infty \leq y \leq +\infty">
+In case of Linear Regression: <img src="https://render.githubusercontent.com/render/math?math=y = w^tx, -\infty \leq x \leq %2B\infty, -\infty \leq y \leq %2B\infty">
 
-Since the linear model is unbounded we cannot fit such model as ![math_here_image](https://render.githubusercontent.com/render/math?math=y=b_0%2b_1x), because it would give nonsenical results, when the output is binary.
+Since the linear model is unbounded we cannot fit such model as ![math_here_image](https://render.githubusercontent.com/render/math?math=y=b_0%2Bb_1x), because it would give nonsenical results, when the output is binary.
 
 We need to tranform LHS (the dependent variable) to match the range of RHS (feature variables).
 
 1. First step is to use <img src="https://render.githubusercontent.com/render/math?math=P"> (probability of success, i.e. <img src="https://render.githubusercontent.com/render/math?math=P(y=1|x)">) instead of <img src="https://render.githubusercontent.com/render/math?math=y">. <img src="https://render.githubusercontent.com/render/math?math=0\leq P \leq 1">.
 
-2. Now we introduce the odds: <img src="https://render.githubusercontent.com/render/math?math=O = \frac{P}{1-P}$. $0\leq O \leq +\infty">.
+2. Now we introduce the odds: <img src="https://render.githubusercontent.com/render/math?math=O = \frac{P}{1-P}$. $0\leq O \leq %2B\infty">.
 
 3. Finally taking <img src="https://render.githubusercontent.com/render/math?math=log"> of odds will yield a variable that ranges from negative to positive infinity.
-    <img src="https://render.githubusercontent.com/render/math?math=-\infty \leq ln(O) \leq +\infty">
+    <img src="https://render.githubusercontent.com/render/math?math=-\infty \leq ln(O) \leq %2B\infty">
     
 Now we have a model that makes sense:
 
@@ -28,7 +28,7 @@ Now we have a model that makes sense:
 
 We can derive <img src="https://render.githubusercontent.com/render/math?math=P"> from this equation:
 
-<img src="https://render.githubusercontent.com/render/math?math=P=\frac{1}{1%2e^{-(w^tx)}}">
+<img src="https://render.githubusercontent.com/render/math?math=P=\frac{1}{1%2Be^{-(w^tx)}}">
 
 To sum up: we build a linear model that can predict the logarithm of odds <img src="https://render.githubusercontent.com/render/math?math=ln(O)">, and that can be transformed to probability. Thus our model predict the probability of <img src="https://render.githubusercontent.com/render/math?math=y"> belonging to class 1.
 
@@ -38,9 +38,9 @@ First we need to establish by what hypothesis (distribuition) the data was gener
 
 We assumed:
 
-<img src="https://render.githubusercontent.com/render/math?math=P(y=1|x) = \frac{1}{1%2e^{-(w^tx)}}">, thus:
+<img src="https://render.githubusercontent.com/render/math?math=P(y=1|x) = \frac{1}{1%2Be^{-(w^tx)}}">, thus:
 
-<img src="https://render.githubusercontent.com/render/math?math=P(y=0|x) = 1 - \frac{1}{1%2e^{-(w^tx)}}">, by law of total probability.
+<img src="https://render.githubusercontent.com/render/math?math=P(y=0|x) = 1 - \frac{1}{1%2Be^{-(w^tx)}}">, by law of total probability.
 
 We have two classes and we know the probability of each.
 A Bernoulli random variable has two possible outcomes: 0 or 1.
@@ -53,9 +53,9 @@ For more convient further optimization let's take log of likelyhood function:
 
 ### <img src="https://render.githubusercontent.com/render/math?math=l(w) = ln(\prod_{i}^{n}P^{y_i}(1-P)^{1-y_i}) = \sum_i^n ln(P^{y_i}(1-P)^{1-y_i})"> 
 
-### <img src="https://render.githubusercontent.com/render/math?math== \sum_i^n y_i ln(P)%2(1-y_i)ln(1-P)">
+### <img src="https://render.githubusercontent.com/render/math?math== \sum_i^n y_i ln(P)%2B(1-y_i)ln(1-P)">
 
-### <img src="https://render.githubusercontent.com/render/math?math=\sum_i^n y_i ln\big(\frac{1}{1%2e^{-w^tx}}\big)+(1-y_i)ln\big(\frac{1}{1+e^{w^tx}}\big)">
+### <img src="https://render.githubusercontent.com/render/math?math=\sum_i^n y_i ln\big(\frac{1}{1%2Be^{-w^tx}}\big)+(1-y_i)ln\big(\frac{1}{1%2Be^{w^tx}}\big)">
 
 Log likelyhood derivative:
 
