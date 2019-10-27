@@ -55,7 +55,7 @@ For more convient further optimization let's take log of likelyhood function:
 
 ### <img src="https://render.githubusercontent.com/render/math?math== \sum_i^n y_i ln(P)%2B(1-y_i)ln(1-P)">
 
-### <img src="https://render.githubusercontent.com/render/math?math=\sum_i^n y_i ln\big(\frac{1}{1%2Be^{-w^tx}}\big)+(1-y_i)ln\big(\frac{1}{1%2Be^{w^tx}}\big)">
+### <img src="https://render.githubusercontent.com/render/math?math=\sum_i^n y_i ln\big(\frac{1}{1%2Be^{-w^tx}}\big)%2B(1-y_i)ln\big(\frac{1}{1%2Be^{w^tx}}\big)">
 
 Log likelyhood derivative:
 
